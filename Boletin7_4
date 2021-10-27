@@ -1,0 +1,33 @@
+package boletin7_4;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin7_4 {
+
+    public static void main(String[] args) {
+
+        Persona p1 = new Persona("Manolo", 0f);
+        Persona p2 = new Persona("Raquel", 0f);
+        String auxNom = JOptionPane.showInputDialog("Introduce o peso de Manolo: ");
+        p1.setPeso(Float.parseFloat(auxNom));
+        String auxNom2 = JOptionPane.showInputDialog("Introduce o peso de Raquel: ");
+        p2.setPeso(Float.parseFloat(auxNom2));
+
+        if (p1.getPeso() > p2.getPeso()) {
+            JOptionPane.showMessageDialog(null, "A persoa que mais pesa é " + p1.getNombre() + " con "
+                    + "un peso de: " + p1.getPeso()+"kg. "
+                            + " A diferencia de peso é de : "+(p1.getPeso()-p2.getPeso())+" kg.");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "A persoa que mais pesa é " + p2.getNombre() + " con"
+                    + " un peso de: " + p2.getPeso()+"kg. "
+                            + " A diferencia de peso é de : "+(p2.getPeso()-p1.getPeso())+" kg.");
+        }
+
+    }
+
+}
